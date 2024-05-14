@@ -1,0 +1,27 @@
+repos:
+# Generic Checks
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.0.1
+  hooks:
+    # Git style
+    - id: check-added-large-files
+    - id: check-merge-conflict
+    - id: check-vcs-permalinks
+    - id: forbid-new-submodules
+    # Common errors
+    - id: end-of-file-fixer
+    - id: trailing-whitespace
+      args: [--markdown-linebreak-ext=md]
+    # Cross platform
+    - id: check-case-conflict
+    - id: mixed-line-ending
+      args: [--fix=lf]
+    # Security
+    - id: detect-aws-credentials
+      args: ['--allow-missing-credentials']
+
+# Git secrets Leaks
+- repo: https://github.com/awslabs/git-secrets.git
+  rev: b4a3208756632bfb87e37ba085c792863deccc74
+  hooks:
+    - id: git-secrets
