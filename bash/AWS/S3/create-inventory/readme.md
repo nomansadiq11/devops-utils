@@ -3,7 +3,7 @@
 
 # Create S3 Inventory in S3
 
-This script use for create the s3 inventory
+This script use for create the s3 inventory and delete the inventory you have created
 
 ## Usecase 1
 
