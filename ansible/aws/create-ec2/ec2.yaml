@@ -1,0 +1,45 @@
+- name: Provision EC2 Instance
+  hosts: localhost
+  gather_facts: no
+  vars:
+    instance_name: "application"
+    aws_region: "us-east-1"
+    ami_id: "ami_id"
+    instance_type: "t2.micro" # You can change this to your desired instance type
+    key_name: "keyname" # Replace with your key pair name
+    security_group: "sg" # Replace with your security group ID
+    subnet_id: "sbnetid" # Replace with your subnet ID
+    vpc_id: "vpcid" # Replace with your VPC ID
+    data_disk_0: /dev/xvda
+    volume_size: 100
+    iam_role_arn: "arn:aws:iam::youaccount:instance-profile/rolename" # Replace with your IAM role ARN
+
+
+  tasks:
+    - name: Launch an EC2 instance
+      amazon.aws.ec2_instance:
+        name: "{{ instance_name }}"
+        key_name: "{{ key_name }}"
+        image_id: "{{ ami_id }}"
+        instance_type: "{{ instance_type }}"
+        region: "{{ aws_region }}"
+        vpc_subnet_id: "{{ subnet_id }}"
+        security_group: "{{ security_group }}"
+        iam_instance_profile: "{{ iam_role_arn }}"
+        volumes:
+          - device_name: "{{ data_disk_0 }}"
+            ebs:
+              volume_type: gp2
+              volume_size: "{{ volume_size }}"
+              delete_on_termination: true
+        wait: true
+        tags:
+          Name: "{{ instance_name }}"
+          created-by: Ansible
+      register: ec2
+      when: ec2_info.instances | length == 0
+
+    - name: Display the EC2 instance ID
+      debug:
+        msg: "Launched EC2 instance ID: {{ ec2.instances[0].id }}"
+      when: ec2_info.instances | length == 0
