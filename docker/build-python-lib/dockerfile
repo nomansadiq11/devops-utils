@@ -1,0 +1,22 @@
+FROM --platform=linux/amd64 amazonlinux:2 AS base
+
+COPY requirements.txt /tmp
+
+RUN yum install -y python3
+
+RUN python3 --version
+
+ENV VIRTUAL_ENV=/opt/venv
+RUN python3 -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
+RUN python3 -m pip install --upgrade pip
+
+RUN python3 -m pip install -r /tmp/requirements.txt
+
+RUN python3 -m pip install venv-pack==0.2.0
+
+RUN mkdir /output && venv-pack -o /output/pyspark_venv_emr.tar.gz
+
+FROM scratch AS export
+COPY --from=base /output/pyspark_venv_emr.tar.gz /
