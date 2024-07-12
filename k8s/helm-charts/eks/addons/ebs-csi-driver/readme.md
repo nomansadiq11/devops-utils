@@ -1,7 +1,7 @@
 
 # EBS CSI Driver
 
-helm link
+github
 
 ```shell
 https://github.com/kubernetes-sigs/aws-ebs-csi-driver
