@@ -17,3 +17,17 @@ brew install --cask iterm2
 ```
 brew install zsh-autocomplete
 ```
+
+> install auto-suggestion
+
+github [link](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+
+
+
+```
+brew install zsh-autosuggestions
+```
+
+```
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+```
