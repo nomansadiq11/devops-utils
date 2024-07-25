@@ -10,3 +10,10 @@
 ```
 brew install --cask iterm2
 ```
+
+
+> install autocomplete
+
+```
+brew install zsh-autocomplete
+```
