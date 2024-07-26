@@ -3,9 +3,8 @@
 
 - its version control tool as everyone know about it
 
-> how to install it
+> how to install git
 
 ```
 brew install git
 ```
-
