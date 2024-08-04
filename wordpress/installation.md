@@ -10,6 +10,11 @@
 > check the access logs
 > check the slowness of the website
 
+### Containerization 
+
+we can run wordpress on Kubernetes
+locally we can use docker 
+
 
 
 
