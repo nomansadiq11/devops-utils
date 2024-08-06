@@ -12,8 +12,10 @@
 
 ### Containerization
 
-we can run wordpress on Kubernetes
-locally we can use docker
+- we can run wordpress on Kubernetes
+- locally we can use docker for development
+
+
 
 
 
