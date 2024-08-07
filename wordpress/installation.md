@@ -1,7 +1,7 @@
 # wordpress
 
-> Make sure you are using correct version of the PHP and wordpress, both should be compatible
-> install right only dependancy
+> Make sure you are using correct version of the PHP installed (server/machine) and wordpress, both should be compatible
+> install only require dependancy
 
 
 ### trobleshoting
@@ -9,6 +9,9 @@
 > the the error logs
 > check the access logs
 > check the slowness of the website
+> website could be slow due to installed plugins
+> remove plugins one by one and see the performance
+> rename the plugins folder, this will deactive all the plugins, so later you can enable plugins one by one and see, which plugin causing slowness
 
 ### Containerization
 
