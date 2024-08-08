@@ -1,4 +1,5 @@
 
+
 # fluent-bit
 
 github
@@ -17,5 +18,5 @@ helm repo update
 install helm
 
 ```shell
-helm install fluent fluent --version={version}
+helm install fluent-bit fluent
 ```
