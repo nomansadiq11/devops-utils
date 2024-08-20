@@ -8,6 +8,9 @@ so here I will write
 > Check Disk space usage by each folder in directory
 
 ```
-du -sch * # here * is path in current director
-du -sch /var/log/ # here add path to find diskspace usage by
+du -sch *               # here * is path in current director
+```
+
+```
+du -sch /var/log/       # here add path to find diskspace usage by
 ```
