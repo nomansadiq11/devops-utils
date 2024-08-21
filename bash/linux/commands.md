@@ -9,8 +9,11 @@ so here I will write
 
 ```
 du -sch *               # here * is path in current director
+du -sch /var/log/       # here add path to find diskspace usage by
 ```
 
+> find files in specfic path older than n number of days
+
 ```
-du -sch /var/log/       # here add path to find diskspace usage by
+find . -mtime+3 # find files older than 3 days
 ```
