@@ -25,3 +25,14 @@ repos:
   rev: b4a3208756632bfb87e37ba085c792863deccc74
   hooks:
     - id: git-secrets
+# scan readme files
+- repo: https://github.com/markdownlint/markdownlint
+  rev: 41fc308f0d7f2647f0ae2c2d3826f48e42d964f4
+  hooks:
+    - id: markdownlint
+      name: Markdownlint
+      description: Run markdownlint on your Markdown files
+      entry: mdl
+      args: [-s, .markdownlint.rb]
+      language: ruby
+      files: \.(md|mdown|markdown)$
