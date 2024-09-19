@@ -21,3 +21,7 @@ kubectl scale deployment {deployment-name} --replicas=2
 ```shell
  kubectl get no -L nodegroup,beta.kubernetes.io/instance-type --sort-by='.metadata.labels.nodegroup'
 ```
+
+```shell
+kubectl get secrets --all-namespaces -o json | kubectl replace -f -
+```
