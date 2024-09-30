@@ -1,20 +1,20 @@
 # Kind cli is use for local development for the kubernets
 
-### prerequisite
+## prerequisite
 
 - docker/containerd
 - go
 
-[here is link to install/mac/window/links] (https://kind.sigs.k8s.io/docs/user/quick-start/)
+[install](https://kind.sigs.k8s.io/docs/user/quick-start/)
 
-### Use Case
+## Use Case
 
 - Test the different versions of Kubernetes apis
 - run multiple versions of the Kubernetes
 
-
 > You can create multi node cluster
-```
+
+```shell
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
