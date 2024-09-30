@@ -4,8 +4,7 @@
 
 - docker/containerd
 - go
-
-> install kindcli [install](https://kind.sigs.k8s.io/docs/user/quick-start/)
+- install kindcli [install](https://kind.sigs.k8s.io/docs/user/quick-start/)
 
 ## Use Case
 
