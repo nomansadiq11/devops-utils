@@ -1,4 +1,6 @@
-# Kind cli is use for local development for the kubernets
+# Kindcli
+
+This use for locally kubernetes application development or kubernetes cluster management
 
 ## prerequisite
 
