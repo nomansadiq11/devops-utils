@@ -11,8 +11,10 @@
 
 - Test the different versions of Kubernetes apis
 - run multiple versions of the Kubernetes
+- you can create multiple node workers cluster
 
-> You can create multi node cluster
+> how to create multiple node wokers cluster
+> use below yaml file
 
 ```shell
 kind: Cluster
@@ -21,4 +23,8 @@ nodes:
 - role: control-plane
 - role: worker
 - role: worker
+```
+
+```shell
+kind create cluster --name kubecluster1 --config kind-multi-node.yaml
 ```
