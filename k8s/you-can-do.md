@@ -25,3 +25,9 @@ kubectl scale deployment {deployment-name} --replicas=2
 ```shell
 kubectl get secrets --all-namespaces -o json | kubectl replace -f -
 ```
+
+> Get all the running pods sort by asc
+
+```shell
+kubectl get pods --sort-by=.metadata.creationTimestamp  --field-selector=status.phase=Running
+```
