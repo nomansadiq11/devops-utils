@@ -8,7 +8,7 @@ one of the reason your AWS S3 cost can increase if you enable the object version
 - we each S3 bucket we added S3 lifecycle policy to delete all the non-current version
 - this is becuase we didn't want non-current version object but some cases you need it as object backup
 
-### Importanct Note
+### Important Note
 
 - Adding policy from cli will overwrite all your existing policy
 - first import all the existing policies in json format
