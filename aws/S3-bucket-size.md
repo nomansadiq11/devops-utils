@@ -2,7 +2,7 @@
 
 ## Usecase
 
-- There is requirenment for get each S3 bucket cost, below script created to get earch S3 bucket cost
+- There is requirenment for get each S3 bucket size, below script created to get earch S3 bucket size
 
 > script for get each S3 bucket cost
 
