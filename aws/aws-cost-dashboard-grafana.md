@@ -38,3 +38,51 @@ echo -e "Month\tUnblendedCost"
 echo -e "$formatted_data"
 
 ```
+
+> cleanup aws cost and usage report from all the accounts
+
+```bash
+#!/bin/bash
+
+coststack=aws-cost-stack
+bucket=aws-cost
+# aws s3api put-bucket-versioning --bucket $bucket --versioning-configuration Status=Suspended
+account=1232345677
+
+echo "Removing cost report"
+aws cur --region us-east-1 delete-report-definition --report-name "$bucket"
+
+echo "checking status"
+aws cloudformation delete-stack --stack-name $coststack
+stackstatus=$(aws cloudformation describe-stacks --stack-name $coststack | jq -er '.Stacks[].StackStatus')
+echo $stackstatus
+
+while [ "$stackstatus" == "DELETE_IN_PROGRESS" ]
+    do
+        echo "sleeping still in progress..."
+        sleep 1
+        stackstatus=$(aws cloudformation describe-stacks --stack-name $coststack | jq -er '.Stacks[].StackStatus')
+        echo $stackstatus
+    done
+
+echo "DONE stack delete"
+
+
+echo "Start deleting files...."
+aws s3 rm s3://$bucket --recursive
+echo "End deleting files...."
+
+echo "Start deleting bucket"
+aws s3api delete-bucket --bucket $bucket --region eu-west-1 --output json
+echo "bucket is deleted successfully"
+
+echo "deattach policy... "
+aws iam detach-role-policy --role-name grafana-athena-datasource-role --policy-arn arn:aws:iam::$account:policy/grafana-athena-datasource
+aws iam detach-role-policy --role-name grafana-athena-datasource-role --policy-arn arn:aws:iam::aws:policy/service-role/AmazonGrafanaAthenaAccess
+
+echo "removing the role and policy "
+aws iam delete-policy --policy-arn arn:aws:iam::$account:policy/grafana-athena-datasource
+aws iam delete-role --role-name grafana-athena-datasource-role
+
+
+```
