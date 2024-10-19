@@ -1,4 +1,4 @@
-# AWS Usecases
+# AWS Use Cases
 
 - [RDS: Stop RDS Oracle instance temporary more than 7 days](stop-rds-on-trigger.md)
 - [S3: Add tag 'Name' to all the S3 buckets](S3-add-name-tag)
