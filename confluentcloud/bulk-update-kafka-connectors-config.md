@@ -2,7 +2,7 @@
 
 ## Usecase
 
-- there was requirements to update the all the kafka connectos configurations
+- there was requirements to update the all the kafka connectos configurations so we created below script todo this change
 
 > get all the connectors config
 
@@ -58,8 +58,6 @@ for json_file in "$folder_path"/*.json; do
         echo "Updated $json_file"
     fi
 done
-
-
 ```
 
 > Update all the configs to connectors
