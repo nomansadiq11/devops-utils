@@ -31,3 +31,10 @@ kubectl get secrets --all-namespaces -o json | kubectl replace -f -
 ```shell
 kubectl get pods --sort-by=.metadata.creationTimestamp  --field-selector=status.phase=Running
 ```
+
+> delete bulk pods
+
+```shell
+kubectl get pod -n namespace --field-selector=status.phase==Failed -o jsonpath='{}' | jq -r ".items[] | .metadata.name" | xargs --no-run-if-empty kubectl -n namespace delete pod
+
+```
