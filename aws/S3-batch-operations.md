@@ -1,5 +1,10 @@
 # AWS S3 Batch Operations
 
+## Usecase
+
+- S3 batch operations created to remove the tags from the objects
+- once we have the S3 inventory(objects), we can create S3 batch operation (create, delete) on those objects
+
 ```bash
 #!/bin/bash
 
@@ -28,6 +33,12 @@ json_content='{
 
 ```
 
+```json
+{
+    "S3DeleteObjectTagging": {}
+}
+```
+
 ```bash
 
 # Replace the placeholder "bucket-name" with the provided manifest bucket name
@@ -52,6 +63,7 @@ bucket_name=$manifest_bucket_name
 output_file="$bucket_name-bucket-policy.json"
 
 # Get the bucket policy and save it to the output file
+# this step added only if your bucket policy have access restriction
 aws s3api get-bucket-policy --bucket "$bucket_name" --query 'Policy' --output text > "policy/$output_file"
 
 # Check if the operation was successful
@@ -63,7 +75,6 @@ else
 fi
 
 
-echo
 
 newjobid=$(aws s3control create-job --account-id "$account_id" --operation file://operation.json --report file://report.json  --manifest file://$new_json_file --priority 10  --role-arn "arn:aws:iam::$account_id:role/s3batchjobrole" --no-confirmation-required)
 
