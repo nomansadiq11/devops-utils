@@ -37,3 +37,16 @@ Host server1
      IdentityFile ssh-key-path
      ProxyJump proxyjumbboxip-ordns
 ```
+
+> below script to replace the value in hostfile, like to enable and disable tunnel for the website
+
+```bash
+
+#!/bin/sh
+# uncomment for enable
+sed -i -e "s/# 127.0.0.1 website.com/127.0.0.1 website.com/g" /etc/hosts
+
+# comment for disable
+sed -i -e "s/127.0.0.1 website.com/# 127.0.0.1 website.com/g" /etc/hosts
+
+```
