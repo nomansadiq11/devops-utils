@@ -3,7 +3,7 @@
 ## Classic Kubernetes Architecture
 
 <p align="center">
-  <img src="Kubernetes_Architecture.png">
+  <img src="img/Kubernetes_Architecture.png">
 </p>
 
 ## Description
