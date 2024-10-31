@@ -1,5 +1,6 @@
 # DevOps Utilities
 
-## description
+## Description
 
-This repo created for utilities can useful for DevOps, DevSecOps, Cloud Engineer
+- This repo created for utilities can useful for DevOps, DevSecOps, Cloud Engineer
+- added usecases 
