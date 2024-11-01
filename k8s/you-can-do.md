@@ -38,3 +38,17 @@ kubectl get pods --sort-by=.metadata.creationTimestamp  --field-selector=status.
 kubectl get pod -n namespace --field-selector=status.phase==Failed -o jsonpath='{}' | jq -r ".items[] | .metadata.name" | xargs --no-run-if-empty kubectl -n namespace delete pod
 
 ```
+
+> Install metrics server and use following to understand the `CPU` and `MEM` usage
+
+```bash
+#
+kubectl top nodes
+
+kubectl top nodes --sort-by cpu
+
+kubectl top nodes --sort-by mem
+
+kubectl top nodes -l nodegroup=apps
+
+```

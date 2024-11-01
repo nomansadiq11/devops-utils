@@ -2,5 +2,5 @@
 
 ## Description
 
-- This repo created for utilities can useful for DevOps, DevSecOps, Cloud Engineer
-- added usecases 
+- This repo created for DevOps, DevSecOps, Cloud Engineer utilities
+- There are `Usecases` added base on my personal experience
