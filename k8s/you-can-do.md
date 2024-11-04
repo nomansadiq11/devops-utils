@@ -42,7 +42,7 @@ kubectl get pod -n namespace --field-selector=status.phase==Failed -o jsonpath='
 > Install metrics server and use following to understand the `CPU` and `MEM` usage
 
 ```bash
-#
+# node level
 kubectl top nodes
 
 kubectl top nodes --sort-by cpu
@@ -50,5 +50,19 @@ kubectl top nodes --sort-by cpu
 kubectl top nodes --sort-by mem
 
 kubectl top nodes -l nodegroup=apps
+
+# pod level
+
+kubectl top pod
+
+kubectl top pod --sort-by cpu
+
+kubectl top pod --sort-by mem
+
+kubectl top pod -l nodegroup=apps
+
+# this will give you resouces usage by containers level
+
+kubectl top pod pod-name --containers
 
 ```
