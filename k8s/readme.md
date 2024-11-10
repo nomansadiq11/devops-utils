@@ -6,6 +6,10 @@
   <img src="img/Kubernetes_Architecture.png">
 </p>
 
+### Kubernetes Network
+
+Tim Hockin, one of the lead Kubernetes developers, has created a very useful slide deck to understand the Kubernetes networking: [An Illustrated Guide to Kubernetes Networking ](https://speakerdeck.com/thockin/illustrated-guide-to-kubernetes-networking).
+
 ## Main Deployment Configurations
 
 At a high level, you have four main deployment configurations:
