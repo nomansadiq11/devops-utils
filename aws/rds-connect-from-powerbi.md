@@ -1,4 +1,4 @@
-# how to
+# RDS connect from powerbi
 
 ## how to connect RDS postgres from powerbi - 1
 
