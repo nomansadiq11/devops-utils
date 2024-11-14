@@ -3,6 +3,7 @@
 ## RDS
 
 - [RDS: Stop RDS Oracle instance temporary more than 7 days](stop-rds-on-trigger.md)
+- [RDS: Postgres Connect using powerbi](./rds-connect-from-powerbi.md)
 
 ## S3
 
