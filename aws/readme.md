@@ -13,6 +13,7 @@
 - [S3: Delete non-current version in bucket](S3-delete-non-current-version.md)
 - [S3: Delete objects in bucket](S3-delete-objects.md)
 - [S3: Change S3 object storeage class](S3-storageclass.md)
+- [S3: Cross account accerss](./S3-cross-account-custom-kms.md)
 
 ## EC2
 
