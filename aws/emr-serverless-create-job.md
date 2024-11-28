@@ -81,3 +81,14 @@ aws emr-serverless start-job-run \
     }'
 
 ```
+
+>
+
+```bash
+
+applicationid={applicationd}
+jobid={jobid}
+
+aws emr-serverless get-job-run --application-id $applicationid  --job-run-id $jobid
+
+```
