@@ -20,3 +20,5 @@ services:
       - TERM=linux
       - GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-piechart-panel,grafana-polystat-panel,vertica-grafana-datasource
 ```
+
+> an example created for personal usecase [local-grafana](https://github.com/nomansadiq11/local-grafana)
