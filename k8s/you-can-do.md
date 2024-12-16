@@ -66,3 +66,9 @@ kubectl top pod -l nodegroup=apps
 kubectl top pod pod-name --containers
 
 ```
+
+> Delete pods forcely
+
+```bash
+kubectl delete po {podname} -n namespace --grace-period=0 --force
+```
