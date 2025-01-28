@@ -29,3 +29,9 @@ nodes:
 ```shell
 kind create cluster --name kubecluster1 --config kind-multi-node.yaml
 ```
+
+> create kubernetes cluster with specific version
+
+```shell
+kind create cluster --config kind-multi-node.yaml --image=kindest/node:v1.30.0
+```
