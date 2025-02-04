@@ -4,10 +4,9 @@ you shouldn't write the commands somewhere to remember it but sometimes you need
 
 so here I will write
 
-
 > Check Disk space usage by each folder in directory
 
-```
+```bash
 du -sch *               # here * is path in current director
 du -sch /var/log/       # here add path to find diskspace usage by
 du -h --exclude=/var/log/ # exclude the path
@@ -17,10 +16,14 @@ du -sh * | sort -k2
 
 # check folder size sort by size
 du -sh * | sort -hr
+
+# Sort by larget folder first - scan only folders
+du -h --max-depth=1 | sort -hr
+
 ```
 
 > find files in specfic path older than n number of days
 
-```
+```bash
 find . -mtime+3 # find files older than 3 days
 ```
