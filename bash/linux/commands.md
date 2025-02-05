@@ -2,9 +2,7 @@
 
 you shouldn't write the commands somewhere to remember it but sometimes you need to find quick way.
 
-so here I will write
-
-> Check Disk space usage by each folder in directory
+## Check Disk Space Usage by each folder in directory
 
 ```bash
 du -sch *               # here * is path in current director
@@ -26,4 +24,12 @@ du -h --max-depth=1 | sort -hr
 
 ```bash
 find . -mtime+3 # find files older than 3 days
+```
+
+## Linux
+
+> Check CPU Architecture
+
+```shell
+uname -m
 ```
