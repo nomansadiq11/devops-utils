@@ -36,11 +36,11 @@ vault write auth/approle/role/role_name \
 ### Step 3 get role_id and secret_id
 
 ```shell
-vault write -f auth/approle/role/airflow/secret-id
+vault write -f auth/approle/role/role_name/secret-id
 ```
 
 ```shell
-vault read auth/approle/role/airflow/role-id
+vault read auth/approle/role/role_name/role-id
 ```
 
 ### Step 4 test the role_id and secret_id using python lib hvac
