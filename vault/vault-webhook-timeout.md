@@ -6,7 +6,7 @@ We have an issue, our pods were failing due to vault:init error, after troublesh
 
 ## Solution 1
 
-Increase the timeout to 30s which will solve the issue
+Increase the vault-webshook `mutatingwebhookconfiguration` timeout to 30s which will solve the issue,
 
 ## Solution 2
 
