@@ -1,8 +1,19 @@
 # SQLite Useful
 
-> create table in the database
+create table in SQLite
 
 ```bash
-sqlite3 incidents.db -cmd "create table incidents(sv int, accountname varchar(100)));"
+sqlite3 database.db -cmd "create table employee(sv int, name varchar(100)));"
+```
 
+Open Database
+
+```shell
+sqlite3 database.db
+```
+
+Exit Database
+
+```shell
+.exit
 ```
