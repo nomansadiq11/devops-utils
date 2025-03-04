@@ -72,3 +72,9 @@ kubectl top pod pod-name --containers
 ```bash
 kubectl delete po {podname} -n namespace --grace-period=0 --force
 ```
+
+> Create temporary pod and test you command on the kubernetes for like networks
+
+```shell
+k -n default run nginx --image=nginx:1.21.5-alpine --restart=Never -i --rm  -- curl app1.app.svc.cluster.local
+```
