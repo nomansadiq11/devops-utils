@@ -33,3 +33,9 @@ find . -mtime+3 # find files older than 3 days
 ```shell
 uname -m
 ```
+
+> command to find the service package location
+
+```bash
+whereis kubelet 
+```
