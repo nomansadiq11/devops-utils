@@ -37,5 +37,5 @@ uname -m
 > command to find the service package location
 
 ```bash
-whereis kubelet 
+whereis kubelet
 ```
