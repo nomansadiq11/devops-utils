@@ -39,3 +39,9 @@ uname -m
 ```bash
 whereis kubelet
 ```
+
+> Find files older than three days
+
+```bash
+find . -maxdepth 1 -mtime 3
+```
