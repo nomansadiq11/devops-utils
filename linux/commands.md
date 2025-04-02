@@ -40,7 +40,7 @@ uname -m
 whereis kubelet
 ```
 
-> Find files older than three days
+> Find files older than three days with max depth like folder level only in current directory
 
 ```bash
 find . -maxdepth 1 -mtime 3
