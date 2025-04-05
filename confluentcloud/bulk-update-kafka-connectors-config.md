@@ -2,7 +2,7 @@
 
 ## Usecase
 
-- there was requirements to update the all the kafka connectos configurations so we created below script todo this change
+- there was requirements to update the all the kafka connectors configs, so we created below script todo this change
 
 > get all the connectors config
 
