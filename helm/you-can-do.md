@@ -18,3 +18,9 @@ Search the helm charts
 ```shell
 helm search repo
 ```
+
+Search the helm charts with all version
+
+```shell
+helm search repo [name of the repo ] -l
+```
