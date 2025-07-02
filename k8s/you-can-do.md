@@ -78,3 +78,9 @@ kubectl delete po {podname} -n namespace --grace-period=0 --force
 ```shell
 k -n default run nginx --image=nginx:1.21.5-alpine --restart=Never -i --rm  -- curl app1.app.svc.cluster.local
 ```
+
+Get All the ingress hosts column
+
+```bash
+kubectl get ing -A -o jsonpath="{range .items[*]}{.spec.rules[*].host}{'\n'}{end}"
+```
