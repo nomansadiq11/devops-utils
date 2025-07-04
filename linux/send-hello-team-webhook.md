@@ -12,3 +12,23 @@ curl -H "Content-Type: application/json" \
      https://outlook.office.com/webhook/YOUR_WEBHOOK_URL
 
 ```
+
+or use this
+
+```bash
+curl -H "Content-Type: application/json" \
+     -d '{
+           "@type": "MessageCard",
+           "@context": "http://schema.org/extensions",
+           "summary": "Build Notification",
+           "themeColor": "0076D7",
+           "title": "Build Successful",
+           "sections": [{
+               "activityTitle": "CI/CD Pipeline",
+               "activitySubtitle": "Build #42 completed",
+               "text": "The latest build was successful and deployed to staging."
+           }]
+         }' \
+     https://outlook.office.com/webhook/YOUR_WEBHOOK_URL
+
+```
