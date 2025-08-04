@@ -84,3 +84,9 @@ Get All the ingress hosts column
 ```bash
 kubectl get ing -A -o jsonpath="{range .items[*]}{.spec.rules[*].host}{'\n'}{end}"
 ```
+
+Set deployment resouces
+
+```yaml
+kubectl set resources deployment/nginx -c=grid-extras --requests=cpu=1,memory=2048Mi
+```
