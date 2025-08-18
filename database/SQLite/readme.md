@@ -13,6 +13,7 @@ sqlite3 database.db
 ```
 
 Change the mode of the data view as table once you connected with your database
+
 ```shell
 .mode table
 ```
