@@ -1,5 +1,7 @@
 # How we can add readonly user in postgres
 
+This script tested on `dbeaver` tool
+
 ```sql
 -- 🔧 Change these values before running
 DO $$
