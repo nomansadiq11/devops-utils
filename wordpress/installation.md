@@ -7,13 +7,11 @@ install only require dependancy
 
 ## How to troubleshoot
 
-> check the httpd/nginx logs
-> the the error logs
-> check the access logs
-> check the slowness of the website
-> website could be slow due to installed plugins
-> remove plugins one by one and see the performance
-> rename the plugins folder, this will deactive all the plugins, so later you can enable plugins one by one and see, which plugin causing slowness
+- Check the httpd/nginx logs
+- Check the access logs
+- Check the slowness of the website, website could be slow due to installed plugins
+- Remove plugins one by one and see the performance
+- Rename the plugins folder, this will deactive all the plugins, so later you can enable plugins one by one and see, which plugin causing slowness
 
 ## Containerization
 
