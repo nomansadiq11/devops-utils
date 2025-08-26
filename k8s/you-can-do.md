@@ -90,3 +90,9 @@ Set deployment resouces
 ```yaml
 kubectl set resources deployment/nginx -c=grid-extras --requests=cpu=1,memory=2048Mi
 ```
+
+Delete all stuck pods
+
+```sh
+kubectl get pods --all-namespaces --no-headers | grep Terminating | awk '{print "kubectl delete pod " $2 " -n " $1 " --grace-period=0 --force"}' | sh
+```
