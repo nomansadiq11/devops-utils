@@ -1,7 +1,7 @@
 repos:
 # Generic Checks
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.0.1
+  rev: v6.0.0
   hooks:
     # Git style
     - id: check-added-large-files

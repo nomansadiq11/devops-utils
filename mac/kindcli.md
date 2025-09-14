@@ -14,10 +14,9 @@ This use for locally kubernetes application development or kubernetes cluster ma
 - run multiple versions of the Kubernetes
 - you can create multiple node workers cluster
 
-> how to create multiple node wokers cluster
-> use below yaml file
+Create cluster with multiple worker nodes
 
-```shell
+```yaml
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
@@ -30,8 +29,20 @@ nodes:
 kind create cluster --name kubecluster1 --config kind-multi-node.yaml
 ```
 
-> create kubernetes cluster with specific version
+create kubernetes cluster with specific version
 
 ```shell
 kind create cluster --config kind-multi-node.yaml --image=kindest/node:v1.30.0
+```
+
+Create cluster without `Network Plugin`
+
+```yaml
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+- role: control-plane
+- role: worker
+networking:
+  disableDefaultCNI: true
 ```
