@@ -2,13 +2,13 @@
 
 This use for locally kubernetes application development or kubernetes cluster management
 
-## prerequisite
+## Prerequisite
 
 - docker/containerd
 - go
 - install kindcli [install](https://kind.sigs.k8s.io/docs/user/quick-start/)
 
-## Use Case
+## Usecase
 
 - Test the different versions of Kubernetes apis
 - run multiple versions of the Kubernetes
