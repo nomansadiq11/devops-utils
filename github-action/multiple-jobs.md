@@ -9,7 +9,7 @@
 ```yaml
 
 job3:
-    needs: [job1, job2]
+    needs: [job1, job2] // here job1 and job2 will completed then this job will start
     runs-on: ['ubuntu']
     env:
         variables: ${{ needs.job1.outputs.somevariable }}
