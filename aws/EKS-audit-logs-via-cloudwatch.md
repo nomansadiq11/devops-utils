@@ -11,3 +11,12 @@ fields @timestamp, user.username, userAgent, sourceIPs, responseStatus.code, obj
 | filter objectRef.name = "podname"
 | sort @timestamp desc
 ```
+
+```SQL
+fields @timestamp, user.username, userAgent, verb, requestURI, responseStatus.code
+| filter verb in ["update", "patch"]
+| filter requestURI like '/api/v1/namespaces/namespace_name'
+| filter requestURI not like '/api/v1/namespaces/namespace_name'
+| sort @timestamp desc
+| limit 50
+```
