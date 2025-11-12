@@ -96,3 +96,9 @@ Delete all stuck pods
 ```sh
 kubectl get pods --all-namespaces --no-headers | grep Terminating | awk '{print "kubectl delete pod " $2 " -n " $1 " --grace-period=0 --force"}' | sh
 ```
+
+You an also view the pods by calling API, the benefit for this, you can view only 500 pods view instead of all the pods
+
+```bash
+kubectl get --raw "/api/v1/namespaces/nameOfnamespace/pods?limit=500" | jq '.items[].metadata.name'
+```
