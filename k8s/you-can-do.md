@@ -102,3 +102,10 @@ You an also view the pods by calling API, the benefit for this, you can view onl
 ```bash
 kubectl get --raw "/api/v1/namespaces/nameOfnamespace/pods?limit=500" | jq '.items[].metadata.name'
 ```
+
+sometime you need to run a container in bash mode, we can use that command
+
+```bash
+kubectl run azcli --image=mcr.microsoft.com/azure-cli -it --rm --restart=Never -- /bin/bash
+
+```
