@@ -8,6 +8,13 @@ docker run -it --entrypoint /bin/bash {docker-image-name}
 
 You can build docker image in multiple CPU Architecture
 
+enable buildx
+
+```bash
+docker buildx create --use
+docker buildx inspect --bootstrap
+```
+
 ```bash
 docker buildx build \
   --platform linux/amd64,linux/arm64 \
@@ -24,4 +31,10 @@ docker buildx build \
   -t your-dockerhub-username/your-image:tag \
   --push .
 
+```
+
+if you want to build locally
+
+```bash
+docker buildx build --platform linux/amd64 -t your-image:tag --load .
 ```
